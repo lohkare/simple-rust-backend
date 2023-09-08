@@ -261,7 +261,7 @@ mod tests {
 
         let get_user_mock = mock_server.mock(|when, then| {
             when.method(GET)
-                .path(format!("{}{}", PATH, TEST_USER_ID))
+                .path(format!("{}/{}", PATH, TEST_USER_ID))
                 .header(CONTENT_TYPE.as_str(), "application/json")
                 .header(ACCEPT.as_str(), "application/json")
             ;
@@ -282,7 +282,7 @@ mod tests {
 
         let get_user_mock = mock_server.mock(|when, then| {
             when.method(GET)
-                .path(format!("{}{}", PATH, TEST_USER_ID))
+                .path(format!("{}/{}", PATH, TEST_USER_ID))
                 .header(CONTENT_TYPE.as_str(), "application/json")
                 .header(ACCEPT.as_str(), "application/json")
             ;
@@ -304,7 +304,7 @@ mod tests {
 
         let get_user_mock = mock_server.mock(|when, then| {
             when.method(GET)
-                .path(format!("{}{}", PATH, TEST_USER_ID))
+                .path(format!("{}/{}", PATH, TEST_USER_ID))
                 .header_exists("Authorization")
                 .header(CONTENT_TYPE.as_str(), "application/json")
                 .header(ACCEPT.as_str(), "application/json")
@@ -338,7 +338,7 @@ mod tests {
 
         let get_user_mock = mock_server.mock(|when, then| {
             when.method(GET)
-                .path(format!("{}{}", PATH, TEST_USER_ID))
+                .path(format!("{}/{}", PATH, TEST_USER_ID))
                 .header_exists("Authorization")
                 .header(CONTENT_TYPE.as_str(), "application/json")
                 .header(ACCEPT.as_str(), "application/json")
