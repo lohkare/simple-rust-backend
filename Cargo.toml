@@ -1,0 +1,22 @@
+[package]
+name = "simple-backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-rt = "2.9.0"
+actix-web = "4.4.0"
+config = "0.13.3"
+config-file = "0.2.3"
+lazy_static = "1.4.0"
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+serde = { version = "1.0.188", features = ["derive"] }
+serde_derive = "1.0.188"
+serde_json = "1.0.105"
+tokio = { version = "1.32.0", features = ["full"] }
+url = "2.4.1"
+
+[dev-dependencies]
+httpmock = "0.6.8"
