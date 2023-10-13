@@ -1,0 +1,4 @@
+## CONFIGURATION
+[go_rest]
+url = "TEST_URL"
+token = "TEST_TOKEN"
