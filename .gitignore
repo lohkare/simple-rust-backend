@@ -1,4 +1,4 @@
 /target
-Config.toml
+/resources/config.toml
 Cargo.lock
 /.idea
