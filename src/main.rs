@@ -8,7 +8,7 @@ mod configuration;
 mod user_service;
 
 lazy_static! {
-    static ref CONFIG: Configuration = configuration::Configuration::read_from_config_file().unwrap();
+    static ref CONFIG: Configuration = configuration::Configuration::read_from_config_file("resources/config").unwrap();
 }
 
 #[tokio::main]

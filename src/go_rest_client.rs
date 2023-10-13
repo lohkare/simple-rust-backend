@@ -28,7 +28,7 @@ const PATH: &str = "/public/v2/users";
 /// Get a list of all users.
 pub async fn get_users() -> Result<Vec<User>, GoRestError> {
     println!("Getting all users...");
-    dbg!(get_users_implementation(CONFIG.go_rest.base_url.as_str(), CONFIG.go_rest.bearer_token.as_str()).await)
+    dbg!(get_users_implementation(CONFIG.go_rest.url.as_str(), CONFIG.go_rest.token.as_str()).await)
 }
 
 /// Get a list of all users.
@@ -88,7 +88,7 @@ async fn get_users_implementation(url: &str, bearer_token: &str) -> Result<Vec<U
 /// * `id` - User id.
 pub async  fn get_user(id: u32) -> Result<User, GoRestError> {
     println!("Getting user with id {}...", &id);
-    dbg!(get_user_implementation(id, CONFIG.go_rest.base_url.as_str(), CONFIG.go_rest.bearer_token.as_str()).await)
+    dbg!(get_user_implementation(id, CONFIG.go_rest.url.as_str(), CONFIG.go_rest.token.as_str()).await)
 }
 
 /// Fetch a single user with given id.
